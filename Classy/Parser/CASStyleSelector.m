@@ -115,7 +115,7 @@
 - (BOOL)matchesAncestorsOfItem:(id<CASStyleableItem>)item traverse:(BOOL)traverse {
     id<CASStyleableItem> currentItem = item;
 
-    while (currentItem.cas_parent != nil || currentItem.cas_alternativeParent != nil) {
+    while (currentItem.cas_parent != nil) {
         id<CASStyleableItem> ancestor;
         if ([self matchesItem:currentItem.cas_parent]) {
             ancestor = currentItem.cas_parent;
